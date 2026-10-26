@@ -1,0 +1,1 @@
+{"version":3,"file":"ITestCaseRdfSyntax.js","sourceRoot":"","sources":["ITestCaseRdfSyntax.ts"],"names":[],"mappings":"","sourcesContent":["import type { ITestCase } from '../ITestCase';\nimport type { IParser } from './IParser';\n\n/**\n * An RDF syntax test case data holder.\n */\nexport interface ITestCaseRdfSyntax extends ITestCase<IParser> {\n  type: 'rdfsyntax';\n}\n"]}

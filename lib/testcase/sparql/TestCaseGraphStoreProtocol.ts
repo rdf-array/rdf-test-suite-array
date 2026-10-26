@@ -1,9 +1,9 @@
 import type * as RDF from '@rdfjs/types';
 import { arrayifyStream } from 'arrayify-stream';
-import { isomorphic } from 'rdf-isomorphic';
 import type { Resource } from 'rdf-object';
 import { ErrorSkipped } from '../../ErrorSkipped';
 import { ErrorTest } from '../../ErrorTest';
+import { isomorphic } from '../../Sequences';
 import { Util } from '../../Util';
 import type { ITestCaseData } from '../ITestCase';
 import type { ITestCaseHandler } from '../ITestCaseHandler';

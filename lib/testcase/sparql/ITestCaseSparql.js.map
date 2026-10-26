@@ -1,0 +1,1 @@
+{"version":3,"file":"ITestCaseSparql.js","sourceRoot":"","sources":["ITestCaseSparql.ts"],"names":[],"mappings":"","sourcesContent":["import type { ITestCase } from '../ITestCase';\nimport type { IQueryEngine } from './IQueryEngine';\n\n/**\n * A SPARQL test case data holder.\n */\nexport interface ITestCaseSparql extends ITestCase<IQueryEngine> {\n  type: 'sparql';\n}\n"]}

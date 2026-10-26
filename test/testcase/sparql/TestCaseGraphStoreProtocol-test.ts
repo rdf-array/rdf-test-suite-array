@@ -1,6 +1,9 @@
 import { Parser } from 'n3';
+
+// The rdf-array fixtures' ( … ) lists read as sequences; rdf-object needs them as ladders
 import type { Resource } from 'rdf-object';
 import { RdfObjectLoader } from 'rdf-object';
+import { expandSequences, RDF_LADDER } from '../../../lib/Sequences';
 import {
   TestCaseGraphStoreProtocol,
   TestCaseGraphStoreProtocolHandler,
@@ -36,7 +39,7 @@ const PREFIXES = `@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-m
 
 async function toResource(turtle: string): Promise<Resource> {
   const objectLoader = new RdfObjectLoader({ context: require('../../../lib/context-manifest.json') });
-  await objectLoader.importArray(new Parser().parse(PREFIXES + turtle));
+  await objectLoader.importArray(expandSequences(new Parser().parse(PREFIXES + turtle), RDF_LADDER));
   return objectLoader.resources['http://example.org/test'];
 }
 

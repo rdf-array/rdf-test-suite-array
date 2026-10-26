@@ -1,3 +1,18 @@
+<img src=".github/rdf-array-logo.png" alt="[rdf-test-suite]" width="96" align="right">
+
+# rdf-test-suite-array: rdf-test-suite for rdf-array
+
+**rdf-array** fork of [rdf-test-suite.js](https://github.com/rubensworks/rdf-test-suite.js): the
+runner reads manifests, inputs and expected results with the rdf-array parsers, so `( … )` in an
+expected N-Triples or Turtle file, `@list` in JSON-LD and `{"type": "seq"}` in SPARQL results are
+sequence terms; it compares graphs with blank nodes inside sequences matched like any others, and a
+sequence never matches an `rdf:first`/`rdf:rest` ladder the data spells out. The JavaScript forks run
+the [-array](https://github.com/rdf-array/rdf-tests-array) and [-contrib](https://github.com/rdf-array/rdf-tests-contrib)
+suites with it. Part of the [rdf-array](https://github.com/rdf-array/rdf-array) organisation; notes in
+[doc/rdf-array.md](doc/rdf-array.md).
+
+---
+
 # RDF-Test-Suite.js
 
 [![Build status](https://github.com/rubensworks/rdf-test-suite.js/workflows/CI/badge.svg)](https://github.com/rubensworks/rdf-test-suite.js/actions?query=workflow%3ACI)

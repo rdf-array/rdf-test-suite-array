@@ -1,0 +1,1 @@
+{"version":3,"file":"ISerializer.js","sourceRoot":"","sources":["ISerializer.ts"],"names":[],"mappings":"","sourcesContent":["import type * as RDF from '@rdfjs/types';\n\n/**\n * A serializer handler.\n */\nexport interface ISerializer {\n  serialize: (data: RDF.Quad[], baseIRI: string, options: Record<string, any>) => Promise<string>;\n}\n"]}

@@ -22,6 +22,12 @@ export class QueryResultBindings implements IQueryResultBindings {
   }
 
   public static serializeTerm(term: RDF.Term, blankNodeCounters: Record<string, number>): any {
+    // Rdf-array: a sequence is compared element by element, its blank nodes normalized like any other
+    if ((<any> term).termType === 'Sequence') {
+      return `(${(<RDF.Term[]> (<any> term).elements)
+        .map(element => JSON.stringify(QueryResultBindings.serializeTerm(element, blankNodeCounters)))
+        .join(' ')})`;
+    }
     switch (term.termType) {
       case 'Literal':
         return fromRdf(term);

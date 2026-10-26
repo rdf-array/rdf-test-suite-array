@@ -1,6 +1,6 @@
 import type * as RDF from '@rdfjs/types';
-import { isomorphic } from 'rdf-isomorphic';
 import { quadToStringQuad } from 'rdf-string';
+import { isomorphic } from '../../Sequences';
 import type { IQueryResult, IQueryResultQuads } from './IQueryEngine';
 
 /**

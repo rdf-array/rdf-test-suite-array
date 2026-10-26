@@ -95,24 +95,24 @@
     "is-stream": "^2.0.0",
     "json-stable-stringify": "^1.0.1",
     "jsonld-context-parser": "^3.1.0",
-    "jsonld-streaming-parser": "^5.0.0",
+    "jsonld-streaming-parser": "github:rdf-array/jsonld-streaming-parser-array#rdf-sequences",
     "log-symbols": "^4.0.0",
     "minimist": "^1.2.0",
-    "n3": "^2.0.3",
+    "n3": "github:rdf-array/N3.js-array#rdf-sequences",
     "papaparse": "^5.5.3",
-    "rdf-data-factory": "^2.0.0",
+    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-sequences",
     "rdf-isomorphic": "^2.0.0",
     "rdf-literal": "^2.0.0",
     "rdf-object": "^3.0.0",
     "rdf-quad": "^2.0.0",
-    "rdf-string": "^2.0.1",
-    "rdf-string-ttl": "^2.0.1",
-    "rdf-terms": "^2.0.0",
-    "rdfxml-streaming-parser": "^3.0.0",
+    "rdf-string": "github:rdf-array/rdf-string-array#rdf-sequences",
+    "rdf-string-ttl": "github:rdf-array/rdf-string-ttl-array#rdf-sequences",
+    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-sequences",
+    "rdfxml-streaming-parser": "github:rdf-array/rdfxml-streaming-parser-array#rdf-sequences",
     "readable-web-to-node-stream": "^3.0.2",
     "relative-to-absolute-iri": "^1.0.7",
-    "sparqljson-parse": "^3.0.0",
-    "sparqlxml-parse": "^3.0.0",
+    "sparqljson-parse": "github:rdf-array/sparqljson-parse-array#rdf-sequences",
+    "sparqlxml-parse": "github:rdf-array/sparqlxml-parse-array#rdf-sequences",
     "stream-to-string": "^1.1.0",
     "streamify-array": "^2.0.0",
     "streamify-string": "^1.0.1"
@@ -133,5 +133,19 @@
     "rimraf": "^6.0.0",
     "ts-jest": "^29.0.0",
     "typescript": "^6.0.0"
+  },
+  "overrides": {
+    "@rdfjs/types": "github:rdf-array/types-array#rdf-sequences",
+    "n3": "github:rdf-array/N3.js-array#rdf-sequences",
+    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-sequences",
+    "rdf-string": "github:rdf-array/rdf-string-array#rdf-sequences",
+    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-sequences"
+  },
+  "resolutions": {
+    "@rdfjs/types": "github:rdf-array/types-array#rdf-sequences",
+    "n3": "github:rdf-array/N3.js-array#rdf-sequences",
+    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-sequences",
+    "rdf-string": "github:rdf-array/rdf-string-array#rdf-sequences",
+    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-sequences"
   }
 }

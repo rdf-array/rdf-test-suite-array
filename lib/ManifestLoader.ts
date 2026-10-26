@@ -1,12 +1,17 @@
+import { arrayifyStream } from 'arrayify-stream';
 import type { Resource } from 'rdf-object';
 import { RdfObjectLoader } from 'rdf-object';
 import { termToString } from 'rdf-string';
 import type { IManifest } from './IManifest';
 import { manifestFromResource } from './IManifest';
+import { expandSequences, RDF_LADDER } from './Sequences';
 import type { ITestCase } from './testcase/ITestCase';
 import type { ITestCaseHandler } from './testcase/ITestCaseHandler';
 import type { IFetchOptions } from './Util';
 import { Util } from './Util';
+
+// eslint-disable-next-line ts/no-require-imports, ts/no-var-requires
+const streamifyArray = require('streamify-array').streamifyArray;
 
 /**
  * A ManifestLoader loads test suites from URLs.
@@ -45,8 +50,9 @@ export class ManifestLoader {
     const requestedFragment = hashIndex >= 0 ? urlInitial.slice(hashIndex + 1) : undefined;
 
     const [ url, parsed ] = await Util.fetchRdf(urlInitial, options);
-    // Dereference the URL and load it
-    await objectLoader.import(parsed);
+    // Dereference the URL and load it; rdf-array: a manifest's ( … ) lists are read as sequence terms,
+    // which rdf-object knows only as rdf:first/rdf:rest ladders
+    await objectLoader.import(streamifyArray(expandSequences(await arrayifyStream(parsed), RDF_LADDER)));
 
     function findManifest(): Resource {
       const extLess = url.slice(0, url.lastIndexOf('.'));
