@@ -2,7 +2,7 @@
 
 rdf-array is RDF with one more kind of term, the **sequence**: `(1 2 3)` in Turtle is one term, not a
 ladder of `rdf:first`/`rdf:rest` blank nodes, and `()` is the empty sequence, not `rdf:nil`. See
-[rdf-array.md](https://rdf-array.github.io/rdf-array/rdf-array.html).
+[rdf-array.md](https://rdf-array.github.io/rdf-array/docs/rdf-array.html).
 
 This fork of [rdf-test-suite.js](https://github.com/rubensworks/rdf-test-suite.js) v2.9.0 lets the
 JavaScript forks run the shared suites ([rdf-tests-array](https://github.com/rdf-array/rdf-tests-array),
