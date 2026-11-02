@@ -36,6 +36,16 @@ describe('Sequences', () => {
   });
 
   describe('isomorphic', () => {
+    it('should count an empty slot, by position, and tell it from any term', () => {
+      const slot = DF.undef();
+      const quad = (...elements: any[]) => [ DF.quad(ex('s'), ex('p'), seq(...elements)) ];
+      expect(isomorphic(quad(ex('a'), slot), quad(ex('a'), slot))).toBe(true);
+      expect(isomorphic(quad(ex('a'), slot), quad(ex('a')))).toBe(false);
+      expect(isomorphic(quad(ex('a'), slot), quad(slot, ex('a')))).toBe(false);
+      expect(isomorphic(quad(ex('a'), slot), quad(ex('a'), ex('a')))).toBe(false);
+      expect(isomorphic(quad(seq(slot)), quad(seq(slot)))).toBe(true);
+    });
+
     it('matches blank nodes inside sequences', () => {
       expect(isomorphic(
         [ DF.quad(ex('s'), ex('p'), seq(DF.blankNode('x'))), DF.quad(DF.blankNode('x'), ex('q'), ex('o')) ],

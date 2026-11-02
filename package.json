@@ -98,21 +98,21 @@
     "jsonld-streaming-parser": "github:rdf-array/jsonld-streaming-parser-array#rdf-sequences",
     "log-symbols": "^4.0.0",
     "minimist": "^1.2.0",
-    "n3": "github:rdf-array/N3.js-array#rdf-sequences",
+    "n3": "github:rdf-array/N3.js-array#rdf-undef",
     "papaparse": "^5.5.3",
-    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-sequences",
+    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-undef",
     "rdf-isomorphic": "^2.0.0",
     "rdf-literal": "^2.0.0",
     "rdf-object": "^3.0.0",
     "rdf-quad": "^2.0.0",
-    "rdf-string": "github:rdf-array/rdf-string-array#rdf-sequences",
-    "rdf-string-ttl": "github:rdf-array/rdf-string-ttl-array#rdf-sequences",
-    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-sequences",
-    "rdfxml-streaming-parser": "github:rdf-array/rdfxml-streaming-parser-array#rdf-sequences",
+    "rdf-string": "github:rdf-array/rdf-string-array#rdf-undef",
+    "rdf-string-ttl": "github:rdf-array/rdf-string-ttl-array#rdf-undef",
+    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-undef",
+    "rdfxml-streaming-parser": "github:rdf-array/rdfxml-streaming-parser-array#rdf-undef",
     "readable-web-to-node-stream": "^3.0.2",
     "relative-to-absolute-iri": "^1.0.7",
-    "sparqljson-parse": "github:rdf-array/sparqljson-parse-array#rdf-sequences",
-    "sparqlxml-parse": "github:rdf-array/sparqlxml-parse-array#rdf-sequences",
+    "sparqljson-parse": "github:rdf-array/sparqljson-parse-array#rdf-undef",
+    "sparqlxml-parse": "github:rdf-array/sparqlxml-parse-array#rdf-undef",
     "stream-to-string": "^1.1.0",
     "streamify-array": "^2.0.0",
     "streamify-string": "^1.0.1"
@@ -135,17 +135,17 @@
     "typescript": "^6.0.0"
   },
   "overrides": {
-    "@rdfjs/types": "github:rdf-array/types-array#rdf-sequences",
-    "n3": "github:rdf-array/N3.js-array#rdf-sequences",
-    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-sequences",
-    "rdf-string": "github:rdf-array/rdf-string-array#rdf-sequences",
-    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-sequences"
+    "@rdfjs/types": "github:rdf-array/types-array#rdf-undef",
+    "n3": "github:rdf-array/N3.js-array#rdf-undef",
+    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-undef",
+    "rdf-string": "github:rdf-array/rdf-string-array#rdf-undef",
+    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-undef"
   },
   "resolutions": {
-    "@rdfjs/types": "github:rdf-array/types-array#rdf-sequences",
-    "n3": "github:rdf-array/N3.js-array#rdf-sequences",
-    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-sequences",
-    "rdf-string": "github:rdf-array/rdf-string-array#rdf-sequences",
-    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-sequences"
+    "@rdfjs/types": "github:rdf-array/types-array#rdf-undef",
+    "n3": "github:rdf-array/N3.js-array#rdf-undef",
+    "rdf-data-factory": "github:rdf-array/rdf-data-factory-array#rdf-undef",
+    "rdf-string": "github:rdf-array/rdf-string-array#rdf-undef",
+    "rdf-terms": "github:rdf-array/rdf-terms-array#rdf-undef"
   }
 }

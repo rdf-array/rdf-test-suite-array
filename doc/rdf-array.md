@@ -41,3 +41,11 @@ runner run the -array and -contrib suites instead. Upstream v2.9.0 passes all 43
 [N3.js-array](https://github.com/rdf-array/N3.js-array) (`npm run spec`) and
 [comunica-array](https://github.com/rdf-array/comunica-array) (`spec:*` scripts), through
 `"rdf-test-suite": "github:rdf-array/rdf-test-suite-array#rdf-sequences"`.
+
+## rdf-undef
+
+Branch `rdf-undef` ([rdf-undef.md](https://rdf-array.github.io/rdf-array/docs/rdf-undef.html)): the expectations of
+rdf-tests-contrib's `undef-*` tests hold empty slots. The dependencies pin the forks' `rdf-undef` branches. `expandSequences` gives a slot
+the word `undef` of the private ladder, since a quad refuses a slot, so isomorphism counts it, and a binding serializes it as `undef`
+between its neighbours. Status: done. `yarn test`: 429 passed, 10 skipped (428 and 10 on `rdf-sequences`). `jsonld-streaming-parser`
+stays on `rdf-sequences`, since JSON-LD waits on rdf-undef.md §5's questions.

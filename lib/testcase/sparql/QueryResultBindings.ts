@@ -25,7 +25,9 @@ export class QueryResultBindings implements IQueryResultBindings {
     // Rdf-array: a sequence is compared element by element, its blank nodes normalized like any other
     if ((<any> term).termType === 'Sequence') {
       return `(${(<RDF.Term[]> (<any> term).elements)
-        .map(element => JSON.stringify(QueryResultBindings.serializeTerm(element, blankNodeCounters)))
+        .map(element => element.termType === <string> 'Undef' ?
+          'undef' :
+          JSON.stringify(QueryResultBindings.serializeTerm(element, blankNodeCounters)))
         .join(' ')})`;
     }
     switch (term.termType) {

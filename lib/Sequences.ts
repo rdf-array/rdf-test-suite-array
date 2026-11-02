@@ -20,6 +20,7 @@ export interface ILadderVocabulary {
   first: RDF.NamedNode;
   rest: RDF.NamedNode;
   nil: RDF.NamedNode;
+  undef: RDF.NamedNode;
 }
 
 /** Rdf:first/rdf:rest/rdf:nil: what an RDF 1.1 consumer such as rdf-object expects of a list. */
@@ -27,6 +28,7 @@ export const RDF_LADDER: ILadderVocabulary = {
   first: DF.namedNode(`${RDF_NS}first`),
   rest: DF.namedNode(`${RDF_NS}rest`),
   nil: DF.namedNode(`${RDF_NS}nil`),
+  undef: DF.namedNode(`${SEQ_NS}undef`),
 };
 
 /**
@@ -37,9 +39,10 @@ export const PRIVATE_LADDER: ILadderVocabulary = {
   first: DF.namedNode(`${SEQ_NS}first`),
   rest: DF.namedNode(`${SEQ_NS}rest`),
   nil: DF.namedNode(`${SEQ_NS}nil`),
+  undef: DF.namedNode(`${SEQ_NS}undef`),
 };
 
-function isSequence(term: any): term is { termType: 'Sequence'; elements: RDF.Term[] } {
+function isSequence(term: any): term is { termType: 'Sequence'; elements: RDF.SequenceElement[] } {
   return term && term.termType === 'Sequence';
 }
 
@@ -53,7 +56,10 @@ export function expandSequences(quads: RDF.Quad[], vocabulary: ILadderVocabulary
     if (isSequence(term)) {
       const cells = term.elements.map(() => DF.blankNode(`rdfarrayseq${counter++}`));
       for (const [ i, element ] of term.elements.entries()) {
-        out.push(DF.quad(cells[i], vocabulary.first, expand(element, graph), graph));
+        // Rdf-undef: a quad refuses the empty slot, so a ladder's cell holds a word for it that no data uses
+        out.push(DF.quad(cells[i], vocabulary.first, element.termType === 'Undef' ?
+          vocabulary.undef :
+          expand(element, graph), graph));
         out.push(DF.quad(cells[i], vocabulary.rest, i + 1 < cells.length ? cells[i + 1] : vocabulary.nil, graph));
       }
       return cells.length > 0 ? cells[0] : vocabulary.nil;

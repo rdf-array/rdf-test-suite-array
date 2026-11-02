@@ -3,6 +3,7 @@ export interface ILadderVocabulary {
     first: RDF.NamedNode;
     rest: RDF.NamedNode;
     nil: RDF.NamedNode;
+    undef: RDF.NamedNode;
 }
 /** Rdf:first/rdf:rest/rdf:nil: what an RDF 1.1 consumer such as rdf-object expects of a list. */
 export declare const RDF_LADDER: ILadderVocabulary;
