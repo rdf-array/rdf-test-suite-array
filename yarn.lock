@@ -8815,9 +8815,9 @@ jsonld-streaming-parser@^5.0.0:
     rdf-data-factory "^2.0.0"
     readable-stream "^4.0.0"
 
-"jsonld-streaming-parser@github:rdf-array/jsonld-streaming-parser-array#rdf-sequences":
+"jsonld-streaming-parser@github:rdf-array/jsonld-streaming-parser-array#rdf-undef":
   version "5.0.0"
-  resolved "https://codeload.github.com/rdf-array/jsonld-streaming-parser-array/tar.gz/fff3d55d05ffccb80280716aa976442e09b0a06a"
+  resolved "https://codeload.github.com/rdf-array/jsonld-streaming-parser-array/tar.gz/c59ab8db15615778a7918a357934d2900c593a9f"
   dependencies:
     "@bergos/jsonparse" "^1.4.0"
     "@types/http-link-header" "^1.0.1"

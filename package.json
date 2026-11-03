@@ -95,7 +95,7 @@
     "is-stream": "^2.0.0",
     "json-stable-stringify": "^1.0.1",
     "jsonld-context-parser": "^3.1.0",
-    "jsonld-streaming-parser": "github:rdf-array/jsonld-streaming-parser-array#rdf-sequences",
+    "jsonld-streaming-parser": "github:rdf-array/jsonld-streaming-parser-array#rdf-undef",
     "log-symbols": "^4.0.0",
     "minimist": "^1.2.0",
     "n3": "github:rdf-array/N3.js-array#rdf-undef",
